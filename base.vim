@@ -42,6 +42,15 @@ highlight ColorColumn ctermbg=magenta
 call matchadd('ColorColumn', '\%81v', 100)
 
 
+" Set the width to 80 for Python and 100 for go
+autocmd BufRead,BufNewFile   *.py set tw=80
+autocmd BufRead,BufNewFile   *.go set tw=100
+
+
+" Wrap the line when it exceeds the max width.
+set wrap
+
+
 " Highlight search matches.
 :set hlsearch
 
