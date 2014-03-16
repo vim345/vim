@@ -31,8 +31,8 @@ hi SpecialKey ctermfg=Blue	   guifg=Blue
 hi StatusLine cterm=bold	   ctermbg=green ctermfg=yellow guibg=gold guifg=blue
 hi StatusLineNC	cterm=bold	   ctermbg=yellow ctermfg=black  guibg=gold guifg=blue
 hi TabLineFill ctermfg=Blue        ctermbg=DarkGreen
-hi TabLine    ctermfg=Black        ctermbg=White
-hi TabLineSel ctermfg=White        ctermbg=Black  cterm=bold
+hi TabLine    ctermfg=White        ctermbg=Blue
+hi TabLineSel ctermfg=Black        ctermbg=White  cterm=bold
 hi Title      ctermfg=DarkMagenta  gui=bold guifg=Magenta
 hi VertSplit  cterm=None	   gui=reverse
 hi Visual     ctermbg=NONE	   cterm=reverse gui=reverse guifg=Grey guibg=fg
