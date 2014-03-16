@@ -28,7 +28,7 @@ hi PmenuSel   ctermfg=White	   ctermbg=Blue  guifg=White  guibg=Blue
 hi Question   ctermfg=DarkGreen    gui=bold guifg=SeaGreen
 hi Search     ctermfg=White	   ctermbg=DarkGreen guibg=White guifg=White
 hi SpecialKey ctermfg=Blue	   guifg=Blue
-hi StatusLine cterm=bold	   ctermbg=green ctermfg=yellow guibg=gold guifg=blue
+hi StatusLine cterm=bold	   ctermbg=blue ctermfg=white guibg=gold guifg=blue
 hi StatusLineNC	cterm=bold	   ctermbg=yellow ctermfg=black  guibg=gold guifg=blue
 hi TabLineFill ctermfg=Blue        ctermbg=DarkGreen
 hi TabLine    ctermfg=White        ctermbg=Blue
