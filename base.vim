@@ -112,3 +112,12 @@ function! HLNext (blinktime)
     call matchdelete(ring)
     redraw
 endfunction
+
+
+" Enable omnifunc to activate auto complete for supported languages.
+set omnifunc=syntaxcomplete#Complete
+
+
+" Vim's popup menu doesn't select the first completion item. Also don't show
+" the top bar.
+set completeopt=longest,menuone
