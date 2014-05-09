@@ -152,7 +152,7 @@ endfunction
 " *****************************************************************************
 " functions called from menu
 " *****************************************************************************
-function! <SID>:GitBranchInfoCheckout(branch)
+function! s:GitBranchInfoCheckout(branch)
 	let l:tokens	= GitBranchInfoTokens()
 	let l:checkout	= "git\ checkout\ ".a:branch 
 	let l:where		= substitute(b:gbi_git_dir,".git$","","")
@@ -161,7 +161,7 @@ function! <SID>:GitBranchInfoCheckout(branch)
 	call s:GitBranchInfoRenewMenu(l:tokens[0],l:tokens[1],l:tokens[2])
 endfunction
 
-function! <SID>:GitBranchInfoFetch(remote)
+function! s:GitBranchInfoFetch(remote)
 	let l:tokens	= GitBranchInfoTokens()
 	let l:fetch		=  "git\ fetch\ ".a:remote
 	let l:where		= substitute(b:gbi_git_dir,".git$","","")
