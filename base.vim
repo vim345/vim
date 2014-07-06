@@ -48,7 +48,7 @@ autocmd BufRead,BufNewFile   *.go set tw=100
 
 
 " Wrap the line when it exceeds the max width.
-set wrap
+" set wrap
 
 
 " Highlight search matches.
