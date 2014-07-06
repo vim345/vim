@@ -121,3 +121,11 @@ set omnifunc=syntaxcomplete#Complete
 " Vim's popup menu doesn't select the first completion item. Also don't show
 " the top bar.
 set completeopt=longest,menuone
+
+
+" When you type the first tab hit will complete as much as possible, the
+" second tab hit will provide a list, the third and subsequent tabs will cycle
+" through completion options so you can complete the file without further keys
+set wildmode=longest,list,full
+set wildmenu
+
