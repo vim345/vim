@@ -37,11 +37,6 @@ set ruler           " Add ruler to status bar.
 set tabpagemax=30   " Max number of open tabs.
 
 
-" Make the 81st column stand out.
-highlight ColorColumn ctermbg=magenta
-call matchadd('ColorColumn', '\%81v', 100)
-
-
 " Set the width to 80 for Python and 100 for go
 autocmd BufRead,BufNewFile   *.py set tw=80
 autocmd BufRead,BufNewFile   *.go set tw=100
