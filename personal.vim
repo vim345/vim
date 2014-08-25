@@ -1,10 +1,13 @@
+" Loads Google Specific settings.
+source /usr/share/vim/google/google.vim
+
 " Uncomment the following to have Vim load indentation rules and plugins
 " according to the detected filetype.
 if has("autocmd")
   filetype plugin indent on
   set smartindent
-  set tabstop=4
-  set shiftwidth=4
+  set tabstop=2
+  set shiftwidth=2
   set expandtab
 endif
 
