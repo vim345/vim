@@ -7,7 +7,7 @@ I have tested this on Arch Linux and Ubuntu 12.04.
 
 You need to add the following to your ~/.bashrc:
 
-export VIMDIR=$HOME/<YOUR REPO>/
+export VIMDIR=$HOME/.vim/
 
 export VIMRC=$VIMDIR/vimrc
 
