@@ -1,6 +1,5 @@
 " Set Abbreviation
 :ab #a assert False
-:ab #T # TODO(Mohammad):
 :iabbr pdb import pdb; pdb.set_trace()
 
 
