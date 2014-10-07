@@ -69,6 +69,8 @@ augroup BgHighlight
     autocmd WinLeave * set nonumber
     autocmd WinEnter * set cul
     autocmd WinLeave * set nocul
+    autocmd WinEnter * set colorcolumn=81
+    autocmd WinLeave * set colorcolumn=0
 augroup END
 doautocmd BgHighlight WinEnter -
 
