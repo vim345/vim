@@ -67,6 +67,8 @@ augroup BgHighlight
     autocmd!
     autocmd WinEnter * set number
     autocmd WinLeave * set nonumber
+    autocmd WinEnter * set cul
+    autocmd WinLeave * set nocul
 augroup END
 doautocmd BgHighlight WinEnter -
 
