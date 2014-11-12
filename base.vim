@@ -67,8 +67,6 @@ augroup BgHighlight
     autocmd!
     autocmd WinEnter * set number
     autocmd WinLeave * set nonumber
-    autocmd WinEnter * set cul
-    autocmd WinLeave * set nocul
     autocmd WinEnter * set colorcolumn=81
     autocmd WinLeave * set colorcolumn=0
 augroup END
@@ -90,8 +88,8 @@ set statusline=%#StatusLineNC#\ Git\ %#ErrorMsg#\ %{GitBranchInfoTokens()[0]}\ %
 
 
 " Highlight matches when jumping to next.
-nnoremap <silent> n   n:call HLNext(0.4)<cr>
-nnoremap <silent> N   N:call HLNext(1.4)<cr>
+nnoremap <silent> n   n:call HLNext(0.2)<cr>
+nnoremap <silent> N   N:call HLNext(0.3)<cr>
 
 " Ring the match in red...
 function! HLNext (blinktime)
@@ -127,4 +125,3 @@ set completeopt=longest,menuone
 " through completion options so you can complete the file without further keys
 set wildmode=longest,list,full
 set wildmenu
-

@@ -40,6 +40,7 @@ hi VisualNOS  cterm=underline,bold gui=underline,bold
 hi WarningMsg ctermfg=DarkRed	   guifg=Red
 hi WildMenu   ctermfg=Black	   ctermbg=Yellow    guibg=Yellow guifg=Black
 hi ColorColumn ctermbg=lightgrey guibg=lightgrey
+hi CursorLine  cterm=NONE ctermbg=lightgrey
 
 " syntax highlighting
 hi Comment    cterm=NONE ctermfg=Red     gui=NONE guifg=red2
