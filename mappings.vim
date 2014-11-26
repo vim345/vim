@@ -37,3 +37,27 @@ endfunction
 nmap <silent> <C-N> :silent noh<CR>
 
 
+"""""""""""""""""""""""""""" Go Specific mappings.
+" Show a list of interfaces which is implemented by the type under your cursor.
+au FileType go nmap <Leader>s <Plug>(go-implements)
+
+" Show type info for the word under your cursor.
+au FileType go nmap <Leader>i <Plug>(go-info)
+
+" Open the relevant Godoc for the word under the cursor.
+au FileType go nmap <Leader>gd <Plug>(go-doc)
+
+" open the definition/declaration in a new vertical, horizontal or tab.
+au FileType go nmap <Leader>ds <Plug>(go-def-split)
+au FileType go nmap <Leader>dv <Plug>(go-def-vertical)
+au FileType go nmap <Leader>dt <Plug>(go-def-tab)
+
+" Run, build, test, and coverage the code.
+au FileType go nmap <leader>r <Plug>(go-run)
+au FileType go nmap <leader>b <Plug>(go-build)
+au FileType go nmap <leader>t <Plug>(go-test)
+au FileType go nmap <leader>c <Plug>(go-coverage)
+
+" Rename the identifier under the cursor to a new name
+au FileType go nmap <Leader>e <Plug>(go-rename)
+"""""""""""""""""""""""""""" End of Go Specific mappings.

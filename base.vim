@@ -130,3 +130,21 @@ set wildmenu
 " Change the default mapping and the default command to invoke CtrlP.
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
+
+" Enable realtime auto complete.
+let g:neocomplete#enable_at_startup = 1
+
+" Enable goimports to automatically insert import paths instead of gofmt.
+let g:go_fmt_command = "goimports"
+
+" Enable syntax-highlighting for Functions, Methods and Structs.
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_structs = 1
+"
+" Show the type info (|:GoInfo|) for the word under the cursor automatically.
+let g:go_auto_type_info = 1
+
+" Highlights operators such as `:=` , `==`, `-=`, etc ...By default it's
+" disabled.
+let g:go_highlight_operators = 1
