@@ -125,3 +125,8 @@ set completeopt=longest,menuone
 " through completion options so you can complete the file without further keys
 set wildmode=longest,list,full
 set wildmenu
+
+
+" Change the default mapping and the default command to invoke CtrlP.
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
