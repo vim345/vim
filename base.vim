@@ -84,7 +84,8 @@ autocmd InsertLeave * match TrailingWhitespace /\s\+$/
 
 " Show current git branch.
 set laststatus=2 " Enables the status line at the bottom of Vim
-set statusline=%#StatusLineNC#\ Git\ %#ErrorMsg#\ %{GitBranchInfoTokens()[0]}\ %#StatusLine#\ %f\ %h%m%r%=%k[%{(&fenc\ ==\\"\"?&enc:&fenc).(&bomb?\",BOM\":\"\")}][U+%04B]\ %-12.(%l,%#ErrorMsg#\%c%V%)\%#StatusLine#\%P
+let g:git_branch_status_head_current=1
+set statusline=%{GitBranchInfoString()}%<%f\ %h%m%r%=%k[%{(&fenc\ ==\\"\"?&enc:&fenc).(&bomb?\",BOM\":\"\")}][U+%04B]\ %-12.(%l,%c%V%)\ %P
 
 
 " Highlight matches when jumping to next.
