@@ -4,8 +4,8 @@
 
 
 " Maping shortcut keys to tab switching
-map <silent><S-Right> :tabnext<CR>
-map <silent><S-Left> :tabprevious<CR>
+map <silent><C-S-l> :tabnext<CR>
+map <silent><C-s-h> :tabprevious<CR>
 
 
 " Erasing trailing whitespace
