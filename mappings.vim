@@ -61,3 +61,11 @@ au FileType go nmap <leader>c <Plug>(go-coverage)
 " Rename the identifier under the cursor to a new name
 au FileType go nmap <Leader>e <Plug>(go-rename)
 """""""""""""""""""""""""""" End of Go Specific mappings.
+
+
+" Switch between files and tests.
+let pattern = '\(\(_\(unit\)\?test\)\?\.\(cc\|js\|py\)\|\(-inl\)\?\.h\)$'
+nmap ,p :vsplit <C-R>=substitute(expand("%"), pattern, "." . expand("%:e"), "")<CR><CR>
+nmap ,tp :tabedit <C-R>=substitute(expand("%"), pattern, "." . expand("%:e"), "")<CR><CR>
+nmap ,t :vsplit <C-R>=substitute(expand("%"), pattern, "_test." . expand("%:e"), "")<CR><CR>
+nmap ,tt :tabedit <C-R>=substitute(expand("%"), pattern, "_test." . expand("%:e"), "")<CR><CR>
