@@ -9,7 +9,7 @@ map <silent><C-s-h> :tabprevious<CR>
 
 
 " Erasing trailing whitespace
-map <silent><C-S-p> :%s/\s\+$//<CR>
+map <silent><C-S-e> :%s/\s\+$//<CR>
 
 
 " Map directory listing
