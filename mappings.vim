@@ -64,7 +64,7 @@ au FileType go nmap <Leader>e <Plug>(go-rename)
 
 
 " Switch between files and tests.
-let pattern = '\(\(_\(unit\)\?test\)\?\.\(cc\|js\|py\)\|\(-inl\)\?\.h\)$'
+let pattern = '\(\(_\(unit\)\?test\)\?\.\(cc\|go\|js\|py\)\|\(-inl\)\?\.h\)$'
 nmap ,p :vsplit <C-R>=substitute(expand("%"), pattern, "." . expand("%:e"), "")<CR><CR>
 nmap ,tp :tabedit <C-R>=substitute(expand("%"), pattern, "." . expand("%:e"), "")<CR><CR>
 nmap ,t :vsplit <C-R>=substitute(expand("%"), pattern, "_test." . expand("%:e"), "")<CR><CR>
