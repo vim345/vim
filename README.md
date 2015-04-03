@@ -12,3 +12,5 @@ export VIMDIR=$HOME/.vim/
 export VIMRC=$VIMDIR/vimrc
 
 export CUSTOM_VIMRC=$VIMDIR/personal.vim
+
+git submodule update --init --recursive
