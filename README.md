@@ -8,8 +8,11 @@ I have tested this on Arch Linux and Ubuntu 12.04.
 You need to add the following to your ~/.bashrc:
 
 export VIMDIR=$HOME/.vim/
+
 export VIMRC=$VIMDIR/vimrc
+
 export CUSTOM_VIMRC=$VIMDIR/personal.vim
 
 And then run the following to get dependencies as well:
+
 git submodule update --init --recursive
