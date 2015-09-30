@@ -67,8 +67,8 @@ augroup BgHighlight
     autocmd!
     autocmd WinEnter * set number
     autocmd WinLeave * set nonumber
-    autocmd WinEnter * set colorcolumn=81
-    autocmd WinLeave * set colorcolumn=0
+    autocmd WinEnter *.py set colorcolumn=81
+    autocmd WinLeave *.py set colorcolumn=0
 augroup END
 doautocmd BgHighlight WinEnter -
 
