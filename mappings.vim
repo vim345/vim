@@ -69,3 +69,7 @@ nmap ,p :vsplit <C-R>=substitute(expand("%"), pattern, "." . expand("%:e"), "")<
 nmap ,tp :tabedit <C-R>=substitute(expand("%"), pattern, "." . expand("%:e"), "")<CR><CR>
 nmap ,t :vsplit <C-R>=substitute(expand("%"), pattern, "_test." . expand("%:e"), "")<CR><CR>
 nmap ,tt :tabedit <C-R>=substitute(expand("%"), pattern, "_test." . expand("%:e"), "")<CR><CR>
+
+
+" Open the Go Tag bar.
+nmap <F8> :TagbarToggle<CR>
