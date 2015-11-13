@@ -38,7 +38,7 @@ set tabpagemax=30   " Max number of open tabs.
 
 
 " Set the width to 80 for Python and 100 for go
-autocmd BufRead,BufNewFile   *.py set tw=80
+autocmd BufRead,BufNewFile   *.py set tw=100
 autocmd BufRead,BufNewFile   *.go set tw=100
 
 
@@ -67,7 +67,7 @@ augroup BgHighlight
     autocmd!
     autocmd WinEnter * set number
     autocmd WinLeave * set nonumber
-    autocmd WinEnter *.py set colorcolumn=81
+    autocmd WinEnter *.py set colorcolumn=101
     autocmd WinLeave *.py set colorcolumn=0
 augroup END
 doautocmd BgHighlight WinEnter -
