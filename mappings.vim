@@ -73,3 +73,8 @@ nmap ,tt :tabedit <C-R>=substitute(expand("%"), pattern, "_test." . expand("%:e"
 
 " Open the Go Tag bar.
 nmap <F8> :TagbarToggle<CR>
+
+
+" Set Syntastic mappings.
+nmap <silent> <C-L> :SyntasticCheck<CR>
+nmap <silent> <C-K> :SyntasticToggleMode<CR>

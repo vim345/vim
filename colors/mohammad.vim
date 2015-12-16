@@ -51,4 +51,10 @@ hi Special    cterm=NONE ctermfg=LightRed    gui=NONE guifg=deeppink
 hi Statement  cterm=bold ctermfg=Blue	     gui=bold guifg=blue
 hi Type	      cterm=NONE ctermfg=Blue	     gui=bold guifg=blue
 
+" Vim diff
+highlight DiffAdd    cterm=bold ctermfg=Black ctermbg=Green gui=none guifg=Black guibg=Green
+highlight DiffDelete cterm=bold ctermfg=Black ctermbg=Red gui=none guifg=Black guibg=Red
+highlight DiffChange cterm=bold ctermfg=Black ctermbg=Green gui=none guifg=Black guibg=Green
+highlight DiffText   cterm=bold ctermfg=Black ctermbg=Red gui=none guifg=Black guibg=Red
+
 " vim: sw=2
