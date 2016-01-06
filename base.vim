@@ -6,6 +6,11 @@ autocmd! bufwritepost .vimrc source %
 call pathogen#infect()
 
 
+
+" Enable 256 color schema.
+set t_Co=256
+
+
 " following enables syntax highlighting by default.
 if has("syntax")
   syntax on
@@ -178,12 +183,3 @@ let g:tagbar_type_go = {
     \ 'ctagsbin'  : 'gotags',
     \ 'ctagsargs' : '-sort -silent'
     \ }
-
-
-" Syntastic check.
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': [] }
-let g:syntastic_python_checkers=['prospector']

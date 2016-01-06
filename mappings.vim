@@ -76,5 +76,5 @@ nmap <F8> :TagbarToggle<CR>
 
 
 " Set Syntastic mappings.
-nmap <silent> <C-L> :SyntasticCheck<CR>
-nmap <silent> <C-K> :SyntasticToggleMode<CR>
+nmap <silent> <C-I> :SyntasticCheck<CR>
+nmap <silent> <C-U> :SyntasticToggleMode<CR>
