@@ -6,8 +6,7 @@ autocmd! bufwritepost .vimrc source %
 call pathogen#infect()
 
 
-
-" Enable 256 color schema.
+" Enable 256 color schema in vimdiff.
 set t_Co=256
 
 
@@ -89,8 +88,9 @@ autocmd InsertLeave * match TrailingWhitespace /\s\+$/
 
 " Show current git branch.
 set laststatus=2 " Enables the status line at the bottom of Vim
-let g:git_branch_status_head_current=1
-set statusline=%{GitBranchInfoString()}%<%f\ %h%m%r%=%k[%{(&fenc\ ==\\"\"?&enc:&fenc).(&bomb?\",BOM\":\"\")}][U+%04B]\ %-12.(%l,%c%V%)\ %P
+" let g:git_branch_status_head_current=1
+" set statusline=%{GitBranchInfoString()}%<%f\ %h%m%r%=%k[%{(&fenc\ ==\\"\"?&enc:&fenc).(&bomb?\",BOM\":\"\")}][U+%04B]\ %-12.(%l,%c%V%)\ %P
+" set statusline=%{}%<%f\ %h%m%r%=%k[%{(&fenc\ ==\\"\"?&enc:&fenc).(&bomb?\",BOM\":\"\")}][U+%04B]\ %-12.(%l,%c%V%)\ %P
 
 
 " Highlight matches when jumping to next.
@@ -183,3 +183,17 @@ let g:tagbar_type_go = {
     \ 'ctagsbin'  : 'gotags',
     \ 'ctagsargs' : '-sort -silent'
     \ }
+
+" Syntastic check.
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': [] }
+let g:syntastic_python_checkers=['prospector']
+let g:syntastic_always_populate_loc_list=1
+
+
+" Aireline status bar.
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'

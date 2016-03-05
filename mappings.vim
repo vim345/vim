@@ -1,6 +1,6 @@
 " Set Abbreviation
 :ab #a assert False
-:iabbr pdb import pdb; pdb.set_trace()
+:iabbr pdb import ipdb; ipdb.set_trace()
 
 
 " Maping shortcut keys to tab switching
@@ -73,3 +73,8 @@ nmap ,tt :tabedit <C-R>=substitute(expand("%"), pattern, "_test." . expand("%:e"
 
 " Open the Go Tag bar.
 nmap <F8> :TagbarToggle<CR>
+
+
+" Syntastic mappings.
+nmap <silent> <F3> :SyntasticCheck<CR>
+nmap <silent> <F4> :SyntasticToggleMode<CR>

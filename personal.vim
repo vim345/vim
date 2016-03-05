@@ -6,6 +6,7 @@ if has("autocmd")
   set tabstop=4
   set shiftwidth=4
   set expandtab
+  autocmd Filetype javascript setlocal ts=2 sw=2 sts=0
 endif
 
 
