@@ -7,11 +7,14 @@ if has("autocmd")
   set shiftwidth=4
   set expandtab
   autocmd Filetype javascript setlocal ts=2 sw=2 sts=0
+  autocmd Filetype html setlocal ts=2 sw=2 sts=0
 endif
 
 
 " Set the color scheme
 colorscheme mohammad
+autocmd BufRead,BufNewFile   *.js colorscheme default
+autocmd BufRead,BufNewFile   *.json colorscheme default
 
 " Fix the difficult-to-read default setting for diff text highlighting.  The
 " " bang (!) is required since we are overwriting the DiffText setting. The highlighting

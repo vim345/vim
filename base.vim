@@ -133,27 +133,28 @@ set wildmode=longest,list,full
 set wildmenu
 
 
-" Change the default mapping and the default command to invoke CtrlP.
-let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlP'
-
 " Enable realtime auto complete.
 let g:neocomplete#enable_at_startup = 1
 
+
 " Enable goimports to automatically insert import paths instead of gofmt.
 let g:go_fmt_command = "goimports"
+
 
 " Enable syntax-highlighting for Functions, Methods and Structs.
 let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1
 let g:go_highlight_structs = 1
-"
+
+
 " Show the type info (|:GoInfo|) for the word under the cursor automatically.
 let g:go_auto_type_info = 1
+
 
 " Highlights operators such as `:=` , `==`, `-=`, etc ...By default it's
 " disabled.
 let g:go_highlight_operators = 1
+
 
 " Format the Go Tagbar.
 let g:tagbar_type_go = {
@@ -192,8 +193,19 @@ set statusline+=%*
 let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': [] }
 let g:syntastic_python_checkers=['prospector']
 let g:syntastic_always_populate_loc_list=1
+let g:syntastic_javascript_checkers = ['jshint']
 
 
 " Aireline status bar.
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
+
+
+" Change the default mapping and the default command to invoke CtrlP.
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+" Exclude files and directories using Vim's wildignore and CtrlP's own g:ctrlp_custom_ignore:
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
+set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows
+set wildignore+=*/bower_components/*     " bower compoentns
+set wildignore+=*/node_modules/*     " Node modules
