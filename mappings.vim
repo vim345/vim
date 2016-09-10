@@ -78,3 +78,9 @@ nmap <F8> :TagbarToggle<CR>
 " Syntastic mappings.
 nmap <silent> <F3> :SyntasticCheck<CR>
 nmap <silent> <F4> :SyntasticToggleMode<CR>
+
+
+" Convert camelCase to under_score
+command CamelCaseTo :s#\(\<\u\l\+\|\l\+\)\(\u\)#\l\1_\l\2#g
+" Convert each name_like_this to NameLikeThis in current line.
+command ToCamelCase :s#\(\%(\<\l\+\)\%(_\)\@=\)\|_\(\l\)#\u\1\2#g

@@ -12,8 +12,10 @@ endif
 
 
 " Set the color scheme
-colorscheme mohammad
+autocmd BufRead,BufNewFile   *.py colorscheme mohammad
 autocmd BufRead,BufNewFile   *.js colorscheme default
+autocmd BufRead,BufNewFile   *.sh colorscheme default
+autocmd BufRead,BufNewFile   *.html colorscheme default
 autocmd BufRead,BufNewFile   *.json colorscheme default
 
 " Fix the difficult-to-read default setting for diff text highlighting.  The
