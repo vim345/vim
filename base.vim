@@ -199,7 +199,8 @@ let g:syntastic_javascript_checkers = ['jshint']
 " Aireline status bar.
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
-
+let g:airline_powerline_fonts = 1
+let g:airline_theme='bubblegum'
 
 " Change the default mapping and the default command to invoke CtrlP.
 let g:ctrlp_map = '<c-p>'
