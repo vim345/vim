@@ -16,3 +16,7 @@ export CUSTOM_VIMRC=$VIMDIR/personal.vim
 And then run the following to get dependencies as well:
 
 git submodule update --init --recursive
+
+Follow the following to install necessary fonts:
+
+https://powerline.readthedocs.io/en/master/installation/linux.html
