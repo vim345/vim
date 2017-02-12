@@ -13,6 +13,7 @@ endif
 
 " Set the color scheme
 autocmd BufRead,BufNewFile   *.py colorscheme mohammad
+autocmd BufRead,BufNewFile   *.go colorscheme mohammad
 autocmd BufRead,BufNewFile   *.js colorscheme default
 autocmd BufRead,BufNewFile   *.sh colorscheme default
 autocmd BufRead,BufNewFile   *.html colorscheme default
