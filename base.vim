@@ -9,6 +9,9 @@ call pathogen#infect()
 " Enable 256 color schema in vimdiff.
 set t_Co=256
 
+" Enable relative number
+set relativenumber
+
 
 " following enables syntax highlighting by default.
 if has("syntax")
