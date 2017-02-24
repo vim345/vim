@@ -219,4 +219,10 @@ set path+=**
 
 
 " Display all matching files when we tab complete
-set wildmenu
+set wildchar=<Tab> wildmenu wildmode=full
+
+
+" press F10 to open the buffer menu
+set wildcharm=<C-Z>
+nnoremap <F10> :b <C-Z>
+nnoremap <F<F5>> :buffers<CR>:buffer<Space>
