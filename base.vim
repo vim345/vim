@@ -218,9 +218,6 @@ set wildignore+=*/node_modules/*     " Node modules
 set path+=**
 
 
-" Display all matching files when we tab complete
-set wildchar=<Tab> wildmenu wildmode=full
-
 
 " press F10 to open the buffer menu
 set wildcharm=<C-Z>
