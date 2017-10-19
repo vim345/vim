@@ -14,12 +14,13 @@ endif
 
 
 " Set the color scheme
-autocmd BufRead,BufNewFile   *.py colorscheme mohammad
-autocmd BufRead,BufNewFile   *.go colorscheme mohammad
-autocmd BufRead,BufNewFile   *.js colorscheme default
-autocmd BufRead,BufNewFile   *.sh colorscheme default
-autocmd BufRead,BufNewFile   *.html colorscheme default
-autocmd BufRead,BufNewFile   *.json colorscheme default
+colorscheme mohammad
+" autocmd BufRead,BufNewFile   *.py colorscheme mohammad
+" autocmd BufRead,BufNewFile   *.go colorscheme mohammad
+" autocmd BufRead,BufNewFile   *.js colorscheme default
+" autocmd BufRead,BufNewFile   *.sh colorscheme default
+" autocmd BufRead,BufNewFile   *.html colorscheme default
+" autocmd BufRead,BufNewFile   *.json colorscheme default
 
 " Fix the difficult-to-read default setting for diff text highlighting.  The
 " " bang (!) is required since we are overwriting the DiffText setting. The highlighting
