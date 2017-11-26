@@ -73,7 +73,6 @@ set splitright
 augroup BgHighlight
     autocmd!
     autocmd WinEnter * set number
-    autocmd WinLeave * set nonumber
     autocmd WinEnter *.py set colorcolumn=101
     autocmd WinLeave *.py set colorcolumn=0
 augroup END
@@ -89,11 +88,29 @@ autocmd InsertEnter * match none
 autocmd InsertLeave * match TrailingWhitespace /\s\+$/
 
 
-" Show current git branch.
+" Status line configuration.
 set laststatus=2 " Enables the status line at the bottom of Vim
-"let g:git_branch_status_head_current=1
-"set statusline=%{GitBranchInfoString()}%<%f\ %h%m%r%=%k[%{(&fenc\ ==\\"\"?&enc:&fenc).(&bomb?\",BOM\":\"\")}][U+%04B]\ %-12.(%l,%c%V%)\ %P
-"set statusline=%{}%<%f\ %h%m%r%=%k[%{(&fenc\ ==\\"\"?&enc:&fenc).(&bomb?\",BOM\":\"\")}][U+%04B]\ %-12.(%l,%c%V%)\ %P
+function! GitBranch()
+  return system("git rev-parse --abbrev-ref HEAD 2>/dev/null | tr -d '\n'")
+endfunction
+
+function! StatuslineGit()
+  let l:branchname = GitBranch()
+  return strlen(l:branchname) > 0?'  '.l:branchname.' ':''
+endfunction
+
+set statusline+=%#TabLine#
+set statusline+=%{StatuslineGit()}
+set statusline+=%#StatusLine#
+set statusline+=\ %f
+set statusline+=%m
+set statusline+=%=
+set statusline+=%#TabLine#
+set statusline+=\ %y
+set statusline+=\ %{&fileencoding?&fileencoding:&encoding}
+set statusline+=\[%{&fileformat}\]
+set statusline+=\ %p%%
+set statusline+=\ %l:%c
 
 
 " Highlight matches when jumping to next.

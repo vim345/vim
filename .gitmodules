@@ -25,3 +25,6 @@
 [submodule "bundle/syntastic"]
 	path = bundle/syntastic
 	url = https://github.com/vim-syntastic/syntastic.git
+[submodule "bundle/vim-diminactive"]
+	path = bundle/vim-diminactive
+	url = https://github.com/blueyed/vim-diminactive.git
