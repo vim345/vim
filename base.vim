@@ -225,6 +225,7 @@ set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows
 set wildignore+=*/bower_components/*     " bower compoentns
 set wildignore+=*/node_modules/*     " Node modules
 
+
 " Enable built-in fuzzy search
 set path+=**
 
@@ -233,3 +234,7 @@ set path+=**
 set wildcharm=<C-Z>
 nnoremap <F10> :b <C-Z>
 nnoremap <F<F5>> :buffers<CR>:buffer<Space>
+
+
+" Disable powerline
+let g:powerline_loaded = 1
