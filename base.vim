@@ -171,6 +171,9 @@ let g:go_highlight_structs = 1
 let g:go_auto_type_info = 1
 
 
+let g:go_auto_sameids = 1
+
+
 " Highlights operators such as `:=` , `==`, `-=`, etc ...By default it's
 " disabled.
 let g:go_highlight_operators = 1
@@ -238,3 +241,7 @@ nnoremap <F<F5>> :buffers<CR>:buffer<Space>
 
 " Disable powerline
 let g:powerline_loaded = 1
+
+
+" Writes the content of the file automatically if you call :make.
+set autowrite

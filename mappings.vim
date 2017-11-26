@@ -38,6 +38,17 @@ nmap <silent> <C-N> :silent noh<CR>
 
 
 """""""""""""""""""""""""""" Go Specific mappings.
+
+" run :GoBuild or :GoTestCompile based on the go file
+function! s:build_go_files()
+  let l:file = expand('%')
+  if l:file =~# '^\f\+_test\.go$'
+    call go#test#Test(0, 1)
+  elseif l:file =~# '^\f\+\.go$'
+    call go#cmd#Build(0)
+  endif
+endfunction
+
 " Show a list of interfaces which is implemented by the type under your cursor.
 au FileType go nmap <Leader>s <Plug>(go-implements)
 
@@ -54,12 +65,22 @@ au FileType go nmap <Leader>dt <Plug>(go-def-tab)
 
 " Run, build, test, and coverage the code.
 au FileType go nmap <leader>r <Plug>(go-run)
-au FileType go nmap <leader>b <Plug>(go-build)
+au FileType go nmap <leader>b :<C-u>call <SID>build_go_files()<CR>
 au FileType go nmap <leader>t <Plug>(go-test)
-au FileType go nmap <leader>c <Plug>(go-coverage)
+au FileType go nmap <leader>c <Plug>(go-coverage-toggle)
 
 " Rename the identifier under the cursor to a new name
 au FileType go nmap <Leader>e <Plug>(go-rename)
+
+" Open the Go Tag bar.
+nmap <F8> :TagbarToggle<CR>
+
+" Jump between errors in quickfix list.
+map <leader>n :cnext<CR>
+map <leader>m :cprevious<CR>
+nnoremap <leader>a :cclose<CR>
+
+
 """""""""""""""""""""""""""" End of Go Specific mappings.
 
 
@@ -69,10 +90,6 @@ nmap ,p :vsplit <C-R>=substitute(expand("%"), pattern, "." . expand("%:e"), "")<
 nmap ,tp :tabedit <C-R>=substitute(expand("%"), pattern, "." . expand("%:e"), "")<CR><CR>
 nmap ,t :vsplit <C-R>=substitute(expand("%"), pattern, "_test." . expand("%:e"), "")<CR><CR>
 nmap ,tt :tabedit <C-R>=substitute(expand("%"), pattern, "_test." . expand("%:e"), "")<CR><CR>
-
-
-" Open the Go Tag bar.
-nmap <F8> :TagbarToggle<CR>
 
 
 " Syntastic mappings.
