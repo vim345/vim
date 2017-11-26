@@ -91,9 +91,9 @@ autocmd InsertLeave * match TrailingWhitespace /\s\+$/
 
 " Show current git branch.
 set laststatus=2 " Enables the status line at the bottom of Vim
-" let g:git_branch_status_head_current=1
-" set statusline=%{GitBranchInfoString()}%<%f\ %h%m%r%=%k[%{(&fenc\ ==\\"\"?&enc:&fenc).(&bomb?\",BOM\":\"\")}][U+%04B]\ %-12.(%l,%c%V%)\ %P
-" set statusline=%{}%<%f\ %h%m%r%=%k[%{(&fenc\ ==\\"\"?&enc:&fenc).(&bomb?\",BOM\":\"\")}][U+%04B]\ %-12.(%l,%c%V%)\ %P
+"let g:git_branch_status_head_current=1
+"set statusline=%{GitBranchInfoString()}%<%f\ %h%m%r%=%k[%{(&fenc\ ==\\"\"?&enc:&fenc).(&bomb?\",BOM\":\"\")}][U+%04B]\ %-12.(%l,%c%V%)\ %P
+"set statusline=%{}%<%f\ %h%m%r%=%k[%{(&fenc\ ==\\"\"?&enc:&fenc).(&bomb?\",BOM\":\"\")}][U+%04B]\ %-12.(%l,%c%V%)\ %P
 
 
 " Highlight matches when jumping to next.
@@ -210,7 +210,6 @@ set wildignore+=*/node_modules/*     " Node modules
 
 " Enable built-in fuzzy search
 set path+=**
-
 
 
 " press F10 to open the buffer menu
