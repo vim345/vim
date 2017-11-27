@@ -227,6 +227,7 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
 set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows
 set wildignore+=*/bower_components/*     " bower compoentns
 set wildignore+=*/node_modules/*     " Node modules
+set wildignore+=*/vendor/*     " Golang vendor files
 
 
 " Enable built-in fuzzy search
