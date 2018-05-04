@@ -1,7 +1,7 @@
 " Automaticall load changes made to vimrc.
 autocmd! bufwritepost .vimrc source %
 
-
+"
 " Pathogen call
 call pathogen#infect()
 
@@ -249,6 +249,10 @@ let g:powerline_loaded = 1
 
 " Writes the content of the file automatically if you call :make.
 set autowrite
+
+
+" Set the tag file.
+set tags=./.tags;
 
 " Automatically paste stuff to vim.
 " function! WrapForTmux(s)
