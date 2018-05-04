@@ -44,9 +44,9 @@ set ruler           " Add ruler to status bar.
 set tabpagemax=30   " Max number of open tabs.
 
 
-" Set the width to 80 for Python and 100 for go
-autocmd BufRead,BufNewFile   *.py set tw=100
-autocmd BufRead,BufNewFile   *.go set tw=100
+" Set the width to 80 for Python and 130 for go
+autocmd BufRead,BufNewFile   *.py set tw=130
+autocmd BufRead,BufNewFile   *.go set tw=130
 
 
 " Wrap the line when it exceeds the max width.
@@ -66,14 +66,14 @@ set splitright
 
 
 " Open/ Tab For Each Buffer
-:set switchbuf=newtab
+" set switchbuf=newtab
 
 
 " Hide the numbers of inactive window, when splitting.
 augroup BgHighlight
     autocmd!
     autocmd WinEnter * set number
-    autocmd WinEnter *.py set colorcolumn=101
+    autocmd WinEnter *.py set colorcolumn=131
     autocmd WinLeave *.py set colorcolumn=0
 augroup END
 doautocmd BgHighlight WinEnter -
@@ -214,7 +214,7 @@ set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
 let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': [] }
-let g:syntastic_python_checkers=['prospector']
+let g:syntastic_python_checkers=['python -m pylint']
 let g:syntastic_always_populate_loc_list=1
 let g:syntastic_javascript_checkers = ['jshint']
 
@@ -228,10 +228,13 @@ set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows
 set wildignore+=*/bower_components/*     " bower compoentns
 set wildignore+=*/node_modules/*     " Node modules
 set wildignore+=*/vendor/*     " Golang vendor files
+set wildignore+=*/virtualenv_run/*     " Files in virtualenv
+set wildignore+=*/docker-venv/*     " Files in docker virtualenv
+set wildignore+=*/playground/*     " Files in playground.
 
 
 " Enable built-in fuzzy search
-set path+=**
+" set path+=**
 
 
 " press F10 to open the buffer menu
@@ -246,3 +249,24 @@ let g:powerline_loaded = 1
 
 " Writes the content of the file automatically if you call :make.
 set autowrite
+
+" Automatically paste stuff to vim.
+" function! WrapForTmux(s)
+"   if !exists('$TMUX')
+"     return a:s
+"   endif
+
+"   let tmux_start = "\<Esc>Ptmux;"
+"   let tmux_end = "\<Esc>\\"
+
+"   return tmux_start . substitute(a:s, "\<Esc>", "\<Esc>\<Esc>", 'g') . tmux_end
+" endfunction
+
+" let &t_SI .= WrapForTmux("\<Esc>[?2004h")
+" let &t_EI .= WrapForTmux("\<Esc>[?2004l")
+
+" function! XTermPasteBegin()
+"   set pastetoggle=<Esc>[201~
+"   set paste
+"   return ""
+" endfunction
