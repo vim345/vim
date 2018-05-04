@@ -4,8 +4,8 @@
 
 
 " Maping shortcut keys to tab switching
-map <silent><C-S-l> :tabnext<CR>
-map <silent><C-s-h> :tabprevious<CR>
+map <silent><C-S-l> :bnext<CR>
+map <silent><C-s-h> :bprevious<CR>
 
 
 " Erasing trailing whitespace
@@ -98,6 +98,6 @@ nmap <silent> <F4> :SyntasticToggleMode<CR>
 
 
 " Convert camelCase to under_score
-command CamelCaseTo :s#\(\<\u\l\+\|\l\+\)\(\u\)#\l\1_\l\2#g
+" command CamelCaseTo :s#\(\<\u\l\+\|\l\+\)\(\u\)#\l\1_\l\2#g
 " Convert each name_like_this to NameLikeThis in current line.
-command ToCamelCase :s#\(\%(\<\l\+\)\%(_\)\@=\)\|_\(\l\)#\u\1\2#g
+" command ToCamelCase :s#\(\%(\<\l\+\)\%(_\)\@=\)\|_\(\l\)#\u\1\2#g
