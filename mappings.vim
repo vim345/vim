@@ -9,7 +9,7 @@ map <silent><C-s-h> :bprevious<CR>
 
 
 " Erasing trailing whitespace
-map <silent><C-S-e> :%s/\s\+$//<CR>
+map <leader>e :%s/\s\+$//<CR>
 
 
 " Map directory listing
@@ -101,3 +101,6 @@ nmap <silent> <F4> :SyntasticToggleMode<CR>
 " command CamelCaseTo :s#\(\<\u\l\+\|\l\+\)\(\u\)#\l\1_\l\2#g
 " Convert each name_like_this to NameLikeThis in current line.
 " command ToCamelCase :s#\(\%(\<\l\+\)\%(_\)\@=\)\|_\(\l\)#\u\1\2#g
+"
+
+xmap <F7> y:call SendViaOSC52(getreg('"'))<cr>

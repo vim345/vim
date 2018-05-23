@@ -240,7 +240,7 @@ set wildignore+=*/playground/*     " Files in playground.
 " press F10 to open the buffer menu
 set wildcharm=<C-Z>
 nnoremap <F10> :b <C-Z>
-nnoremap <F<F5>> :buffers<CR>:buffer<Space>
+nnoremap <F5> :buffers<CR>:buffer<Space>
 
 
 " Disable powerline
@@ -274,3 +274,4 @@ set tags=./.tags;
 "   set paste
 "   return ""
 " endfunction
+"

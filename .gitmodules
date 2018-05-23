@@ -28,3 +28,6 @@
 [submodule "bundle/vim-diminactive"]
 	path = bundle/vim-diminactive
 	url = https://github.com/blueyed/vim-diminactive.git
+[submodule "bundle/vim-osc52"]
+	path = bundle/vim-osc52
+	url = https://github.com/fcpg/vim-osc52.git
