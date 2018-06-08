@@ -100,7 +100,7 @@ function! StatuslineGit()
 endfunction
 
 set statusline+=%#TabLine#
-set statusline+=%{StatuslineGit()}
+"set statusline+=%{StatuslineGit()}
 set statusline+=%#StatusLine#
 set statusline+=\ %f
 set statusline+=%m
@@ -208,15 +208,15 @@ let g:tagbar_type_go = {
     \ 'ctagsargs' : '-sort -silent'
     \ }
 
-" Syntastic check.
+"" Syntastic check.
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
-let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': [] }
-let g:syntastic_python_checkers=['python -m pylint']
-let g:syntastic_always_populate_loc_list=1
-let g:syntastic_javascript_checkers = ['jshint']
+"let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': [] }
+"let g:syntastic_python_checkers=['python -m pylint']
+"let g:syntastic_always_populate_loc_list=1
+"let g:syntastic_javascript_checkers = ['jshint']
 
 
 " Change the default mapping and the default command to invoke CtrlP.
@@ -274,4 +274,8 @@ set tags=./.tags;
 "   set paste
 "   return ""
 " endfunction
-"
+
+
+" Let backspace do its job
+set backspace=indent,eol,start
+
