@@ -90,27 +90,28 @@ autocmd InsertLeave * match TrailingWhitespace /\s\+$/
 
 " Status line configuration.
 set laststatus=2 " Enables the status line at the bottom of Vim
-function! GitBranch()
-  return system("git rev-parse --abbrev-ref HEAD 2>/dev/null | tr -d '\n'")
-endfunction
 
-function! StatuslineGit()
-  let l:branchname = GitBranch()
-  return strlen(l:branchname) > 0?'  '.l:branchname.' ':''
-endfunction
-
-set statusline+=%#TabLine#
-"set statusline+=%{StatuslineGit()}
+set statusline=%#Question#
+set statusline+=%{fugitive#statusline()}
 set statusline+=%#StatusLine#
 set statusline+=\ %f
-set statusline+=%m
-set statusline+=%=
-set statusline+=%#TabLine#
-set statusline+=\ %y
-set statusline+=\ %{&fileencoding?&fileencoding:&encoding}
-set statusline+=\[%{&fileformat}\]
-set statusline+=\ %p%%
-set statusline+=\ %l:%c
+set statusline+=%#WarningMsg#
+set statusline+=\ %n
+set statusline+=%#StatusLine#
+set statusline+=%=    " Switch to right.
+set statusline+=%#VisualNOS#
+set statusline+=%y
+set statusline+=\ %l   " Current line
+set statusline+=/      " Separator
+set statusline+=%L     " Total lines
+set statusline+=\ %P   " Current percentage
+set statusline+=%#VertSplit#
+set statusline+=\ %c   " Current width
+set statusline+=%#StatusLine#
+set statusline+=\ %m   " Modified flag.
+set statusline+=\ %r   " Readonly flag.
+set statusline+=\ %w   " Preview flag.
+set statusline+=\ %q   " QuickList flag.
 
 
 " Highlight matches when jumping to next.
@@ -279,3 +280,11 @@ set tags=./.tags;
 " Let backspace do its job
 set backspace=indent,eol,start
 
+
+" Auto clean fugitive buffers.
+autocmd BufReadPost fugitive://* set bufhidden=delete
+
+
+" Format JSON.
+com! FormatJSON %!jq .
+com! FormatJSON4 %!python -m json.tool

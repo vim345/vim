@@ -1,11 +1,12 @@
 " Set Abbreviation
 :ab #a assert False
-:iabbr pdb import ipdb; ipdb.set_trace()
+:iabbr pdb import pdb; pdb.set_trace()
+:iabbr ipdb import ipdb; ipdb.set_trace()
 
 
 " Maping shortcut keys to tab switching
-map <silent><C-S-l> :bnext<CR>
-map <silent><C-s-h> :bprevious<CR>
+map <silent><C-S-l> :tabnext<CR>
+map <silent><C-s-h> :tabprevious<CR>
 
 
 " Erasing trailing whitespace
