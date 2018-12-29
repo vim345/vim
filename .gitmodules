@@ -31,3 +31,6 @@
 [submodule "bundle/vim-osc52"]
 	path = bundle/vim-osc52
 	url = https://github.com/fcpg/vim-osc52.git
+[submodule "bundle/YouCompleteMe"]
+	path = bundle/YouCompleteMe
+	url = https://github.com/Valloric/YouCompleteMe.git
