@@ -294,3 +294,12 @@ com! FormatJSON4 %!python -m json.tool
 " Break/Join function arguments in python argument.
 nnoremap <silent> <leader>w :ArgWrap<CR>
 let g:argwrap_tail_comma = 1
+
+
+" Trigger configuration. Do not use <tab> if you use
+ let g:UltiSnipsExpandTrigger="<c-space>"
+ let g:UltiSnipsJumpForwardTrigger="<c-b>"
+ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+ " If you want :UltiSnipsEdit to split your window.
+ let g:UltiSnipsEditSplit="vertical"
