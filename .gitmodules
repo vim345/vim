@@ -34,3 +34,6 @@
 [submodule "bundle/YouCompleteMe"]
 	path = bundle/YouCompleteMe
 	url = https://github.com/Valloric/YouCompleteMe.git
+[submodule "bundle/vim-argwrap"]
+	path = bundle/vim-argwrap
+	url = https://github.com/FooSoft/vim-argwrap.git

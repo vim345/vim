@@ -289,3 +289,8 @@ autocmd BufReadPost fugitive://* set bufhidden=delete
 " Format JSON.
 com! FormatJSON %!jq .
 com! FormatJSON4 %!python -m json.tool
+
+
+" Break/Join function arguments in python argument.
+nnoremap <silent> <leader>w :ArgWrap<CR>
+let g:argwrap_tail_comma = 1
