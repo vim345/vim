@@ -92,6 +92,12 @@ nmap ,tp :tabedit <C-R>=substitute(expand("%"), pattern, "." . expand("%:e"), ""
 nmap ,t :vsplit <C-R>=substitute(expand("%"), pattern, "_test." . expand("%:e"), "")<CR><CR>
 nmap ,tt :tabedit <C-R>=substitute(expand("%"), pattern, "_test." . expand("%:e"), "")<CR><CR>
 
+let test_pattern = '_test'
+nmap ,y :vsplit <C-R>="tests/". join(split(expand("%:r"), "/")[1:], "/") . "_test." . expand("%:e")<CR><CR>
+nmap ,ty :tabedit <C-R>="tests/". join(split(expand("%:r"), "/")[1:], "/") . "_test." . expand("%:e")<CR><CR>
+nmap ,e :vsplit <C-R>=getcwd() . "/" . split(getcwd(), "/")[-1] . "/" . substitute(join(split(expand("%:r"), "/")[1:], "/"), test_pattern, "." . expand("%:e"), "")<CR><CR>
+nmap ,te :tabedit <C-R>=getcwd() . "/" . split(getcwd(), "/")[-1] . "/" . substitute(join(split(expand("%:r"), "/")[1:], "/"), test_pattern, "." . expand("%:e"), "")<CR><CR>
+
 
 " Syntastic mappings.
 nmap <silent> <F3> :SyntasticCheck<CR>

@@ -47,10 +47,11 @@ set tabpagemax=30   " Max number of open tabs.
 " Set the width to 80 for Python and 130 for go
 autocmd BufRead,BufNewFile   *.py set tw=130
 autocmd BufRead,BufNewFile   *.go set tw=130
+autocmd BufRead,BufNewFile   *.tmpl set tw=0
 
 
 " Wrap the line when it exceeds the max width.
-" set wrap
+set wrap!
 
 
 " Highlight search matches.
@@ -253,7 +254,7 @@ set autowrite
 
 
 " Set the tag file.
-set tags=./.tags;
+set tags=./.tags;/
 
 " Automatically paste stuff to vim.
 " function! WrapForTmux(s)
